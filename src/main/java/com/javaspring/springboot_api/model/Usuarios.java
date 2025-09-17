@@ -17,14 +17,16 @@ public class Usuarios {
     private String nome;
     private String email;
     private String senha;
+    private Boolean professor;
 
     public Usuarios() {}
 
-    public Usuarios(Long id, String nome, String email, String senha) {
+    public Usuarios(Long id, String nome, String email, String senha, boolean professor) {
         this.id = id;
         this.nome = nome;
         this.email = email;
         this.senha = senha;
+        this.professor = professor;
     }
 
     //Getters e Setters
@@ -54,5 +56,13 @@ public class Usuarios {
     }
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public Boolean getProfessor () {
+        return professor;
+    }
+
+    public void setProfessor (Boolean professor) {
+        this.professor = professor;
     }
 }
